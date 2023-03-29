@@ -14,12 +14,17 @@ class Tasks extends BaseController
             $data = $model->findAll();
 
        return view("Tasks/index.php", ['tasks' => $data]);
-    }
-    public function show($id){
-     $model = new \App\Models\TaskModel;
-     $task = $model->find($id);
 
-     dd($task);
+    }
+    public function show($id)
+    {
+        $model = new \App\Models\TaskModel;
+
+        $task = $model->find($id);
+
+        return view('Tasks/show' , [
+            'task' => $task
+        ]);
     }
 
 }

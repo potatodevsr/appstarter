@@ -8,13 +8,17 @@
 
 <dl>
     <dt>ID</dt>
-    <dd><?= $stask['id'] ?></dd>
+    <dd><?= $task['id'] ?></dd>
 
     <dt>Description</dt>
     <dd><?= $task['description'] ?></dd>
 
     <dt>Created at</dt>
     <dd><?= $task['created_at'] ?></dd>
+
+    <dt>Updated at</dt>
+    <dd><?= $task['updated_at'] ?></dd>
+
     
 </dl>
 
