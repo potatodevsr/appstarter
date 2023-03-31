@@ -8,14 +8,12 @@
 
     <ul>
         <?php foreach($tasks as $task): ?>
-
             <li>
-                <?= $task['id'] ?>
+                <a href="<?= "/appstarter/tasks/show/" . $task['id'] ?>">
                 <?= $task['description'] ?>
-            </li>
-            
+                </a>
+            </li>      
         <?php endforeach; ?>
-
     </ul>
 
 <?= $this->endSection() ?>

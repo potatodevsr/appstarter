@@ -1,16 +1,18 @@
-<?= $this->extend("layouts/default") ?>
+<?= $this->extend('layouts/default') ?>
 
-<?= $this->section("title") ?>Task<?= $this->endSection() ?>
+<?= $this->section('title') ?>Task<?= $this->endSection() ?>
 
-<?= $this->section("content") ?>
+<?= $this->section('content') ?>
 
 <h1>Task</h1>
+
+<a href="/appstarter/tasks">&laquo; back to index</a>
 
 <dl>
     <dt>ID</dt>
     <dd><?= $task['id'] ?></dd>
 
-    <dt>Description</dt>
+    <dt>Description</dt> 
     <dd><?= $task['description'] ?></dd>
 
     <dt>Created at</dt>
@@ -18,8 +20,6 @@
 
     <dt>Updated at</dt>
     <dd><?= $task['updated_at'] ?></dd>
-
-    
 </dl>
 
 <?= $this->endSection() ?>
