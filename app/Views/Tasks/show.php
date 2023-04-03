@@ -6,18 +6,18 @@
 
 <h1>Task</h1>
 
-<a href="/appstarter/tasks">&laquo; back to index</a>
+<a href= "/appstarter/tasks" >&laquo; back to index</a>
 
 <dl>
     <dt>ID</dt>
     <dd><?= $task['id'] ?></dd>
-
-    <dt>Description</dt> 
+    
+    <dt>Description</dt>
     <dd><?= $task['description'] ?></dd>
-
+    
     <dt>Created at</dt>
     <dd><?= $task['created_at'] ?></dd>
-
+    
     <dt>Updated at</dt>
     <dd><?= $task['updated_at'] ?></dd>
 </dl>

@@ -6,6 +6,8 @@
 
     <h1>Tasks</h1>
 
+    <a href="/appstarter/tasks/new">New Task</a>
+
     <ul>
         <?php foreach($tasks as $task): ?>
             <li>
