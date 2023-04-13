@@ -6,14 +6,24 @@
 
 <h1>New task</h1>
 
-<?= form_open("/tasks/create") ?>
+<?php if (session()->has('errors')): ?>
+    <ul>
+        <?php foreach(session('errors') as $error): ?>
+            <li><?= $error ?></li>
+        <?php endforeach; ?>
+    </ul>
+<?php endif; ?>
+
+<?= form_open("/appstarter/tasks/create") ?>
+
     <div>
         <label for="description">Description</label>
         <input type="text" name="description" id="description" value="">
     </div>
-
+    
     <button>Save</button>
-    <a href="/appstarter/tasks">Cancel</a>
+    
+    <a href="<?= site_url("/appstarter/tasks") ?>">Cancel</a>
 
 </form>
 

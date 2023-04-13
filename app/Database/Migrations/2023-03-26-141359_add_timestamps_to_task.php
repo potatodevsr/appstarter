@@ -20,8 +20,8 @@ class AddTimestampsToTask extends Migration
     }
     public function down()
     {
-        $this->forge->dropColum('task', 'updated_at');
-        $this->forge->dropColum('task', 'created_at');
+        $this->forge->dropColumn('task', 'updated_at');
+        $this->forge->dropColumn('task', 'created_at');
 
     }
     

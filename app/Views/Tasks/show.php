@@ -6,7 +6,7 @@
 
 <h1>Task</h1>
 
-<a href= "/appstarter/tasks" >&laquo; back to index</a>
+<a href="<?= site_url("/appstarter/tasks") ?>">&laquo; back to index</a>
 
 <dl>
     <dt>ID</dt>

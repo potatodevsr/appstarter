@@ -31,16 +31,20 @@ class Tasks extends BaseController
 	public function create()
 	{
         $model = new \App\Models\TaskModel;
-		
-		$model->insert([
+
+		$result = $model->insert([
 			'description' => $this->request->getPost("description")
 		]);
-		if ($result === false) {
+	
+        if ($result === false) {
+            return redirect()->to("/appstarter/tasks/new")
+							 ->with('errors', $model->errors())
+							 ->with('warning', 'Invalid date');
+		
+        } else {
+		
+			return redirect()->to("/appstarter/tasks/show/$result");
 			
-			dd($model->errors());
-			
-		} else {
-			dd($result);
 		}
 	}
 }

@@ -27,13 +27,13 @@ class Database extends Config
     public array $default = [
         'DSN'      => '',
         'hostname' => 'localhost:3306',
-        'username' => 'root',
-        'password' => '',
+        'username' => 'username',
+        'password' => 'password',
         'database' => 'taskapp',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
         'pConnect' => false,
-        'DBDebug'  => true,
+        'DBDebug'  => false,
         'charset'  => 'utf8',
         'DBCollat' => 'utf8_general_ci',
         'swapPre'  => '',
@@ -41,7 +41,6 @@ class Database extends Config
         'compress' => false,
         'strictOn' => false,
         'failover' => [],
-        'port'     => 3306,
     ];
 
     /**

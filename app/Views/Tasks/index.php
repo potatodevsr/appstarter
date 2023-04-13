@@ -5,16 +5,18 @@
 <?= $this->section("content") ?>
 
     <h1>Tasks</h1>
-
-    <a href="/appstarter/tasks/new">New Task</a>
-
+    
+    <a href="<?= site_url("/appstarter/tasks/new/") ?>">New task</a>
+    
     <ul>
         <?php foreach($tasks as $task): ?>
+        
             <li>
-                <a href="<?= "/appstarter/tasks/show/" . $task['id'] ?>">
-                <?= $task['description'] ?>
+                <a href="<?= site_url("/appstarter/tasks/show/" . $task['id']) ?>">
+                    <?= $task['description'] ?>
                 </a>
-            </li>      
+            </li>
+            
         <?php endforeach; ?>
     </ul>
 
