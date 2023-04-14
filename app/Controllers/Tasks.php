@@ -43,9 +43,19 @@ class Tasks extends BaseController
 		
         } else {
 		
-			return redirect()->to("/appstarter/tasks/show/$result");
-			
+			return redirect()->to("/appstarter/tasks/show/$result")
+							->with('info', 'Task creared successfully');
 		}
+	}
+	public function edit($id)
+	{
+		$model = new \App\Models\TaskModel;
+
+		$task = $model->find($id);
+
+		return view('Tasks/edit', [
+			'task' => $task
+		]);
 	}
 }
 
