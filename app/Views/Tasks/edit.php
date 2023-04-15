@@ -14,16 +14,12 @@
     </ul>
 <?php endif; ?>
 
-<?= form_open("/appstarter/tasks/update/" . $task['id']) ?>
+<?= form_open("/appstarter/tasks/update/" . $task->id) ?>
+    <?= $this->include('Tasks/form') ?>
 
-    <div>
-        <label for="description">Description</label>
-        <input type="text" name="description" id="description" value="<?= esc($task['description']) ?>">
-    </div>
-    
     <button>Save</button>
     
-    <a href="<?= site_url("/appstarter/tasks/show/" . $task['id']) ?>">Cancel</a>
+    <a href="<?= site_url("/appstarter/tasks/show/" . $task->id) ?>">Cancel</a>
 
 </form>
 
