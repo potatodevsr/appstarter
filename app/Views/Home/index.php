@@ -6,4 +6,7 @@
 
     <h1>Welcome</h1>
 
+    <a href="<?= site_url("/appstarter/signup") ?>">Sign up</a>
+
+
 <?= $this->endSection() ?>
