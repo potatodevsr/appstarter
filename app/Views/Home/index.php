@@ -8,5 +8,21 @@
 
     <a href="<?= site_url("/appstarter/signup") ?>">Sign up</a>
 
+    <?php if (session()->has('user_id')): ?>
+
+    <p>User is logged in</p>
+
+    <p>Hello <?= esc(current_user()->name) ?></p>
+
+    <a href="<?= site_url("/appstarter/logout") ?>">Log out</a>
+
+<?php else: ?>
+
+    <p>User is not logged in</p>
+    
+    <a href="<?= site_url("/appstarter/login") ?>">Log in</a>
+
+
+<?php endif; ?>
 
 <?= $this->endSection() ?>
