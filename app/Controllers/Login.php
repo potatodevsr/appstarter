@@ -16,7 +16,7 @@ class Login extends BaseController
 		$password = $this->request->getPost('password');
 
 
-        $auth = new \App\Libraries\Authentication;
+        $auth = \Config\Services::auth();
 
         if ($auth ->login($email, $password)){
 
@@ -26,21 +26,17 @@ class Login extends BaseController
             return redirect()->to("/appstarter/login")
             ->withInput()
             ->with('warning', 'Invalid login');
-
-
-
         }
     }
 
     public function delete()
     {
-        $auth = new \App\Libraries\Authentication;
+        
+        // $auth = new \App\Libraries\Authentication;
 
-        $auth->logout();
+        service('auth')->logout();
 
         return redirect()->to("/appstarter/login/showLogoutMessage");
-
-
     }
     public function showLogoutMessage()
     {
