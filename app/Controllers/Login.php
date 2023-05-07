@@ -19,9 +19,12 @@ class Login extends BaseController
         $auth = \Config\Services::auth();
 
         if ($auth ->login($email, $password)){
+            $redirect_url = session('redirect_url') ?? '/appstarter';
 
-            return redirect()->to("/appstarter")
-            ->with('info', 'Login successful');
+            unset($_SESSION['redirect_url']);
+
+            return redirect()->to($redirect_url)
+                             ->with('info', 'Login successful');
         } else {
             return redirect()->to("/appstarter/login")
             ->withInput()

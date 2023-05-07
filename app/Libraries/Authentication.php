@@ -40,7 +40,8 @@ if ( ! $user->verifyPassword($password)) {
     public function getCurrentUser()
     {
 
-        if ( ! session()->has('user_id')) {
+        if ( ! $this->isLoggedIn()) {
+            
             return null;
         }
         
@@ -54,5 +55,9 @@ if ( ! $user->verifyPassword($password)) {
 
         return $this->user;
 
+    }
+    public function isLoggedIn()
+    {
+       return session()->has('user_id');
     }
 }
