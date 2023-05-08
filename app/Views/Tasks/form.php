@@ -1,4 +1,4 @@
-<!-- <input type="hidden" name="<?= csrf_token() ?>" value="an invalid token" /> -->
+<input type="hidden" name="<?= csrf_token() ?>" value="an invalid token" />
 
 <div>
         <label for="description">Description</label>

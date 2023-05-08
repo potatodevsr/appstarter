@@ -7,6 +7,8 @@
     <h1>Tasks</h1>
     
     <a href="<?= site_url("/appstarter/tasks/new/") ?>">New task</a>
+
+    <?php if ($tasks): ?>
     
     <ul>
         <?php foreach($tasks as $task): ?>
@@ -19,5 +21,9 @@
             
         <?php endforeach; ?>
     </ul>
+
+    <?php else: ?>
+        <p>No tasks found.</p>
+    <?php endif; ?>
 
 <?= $this->endSection() ?>

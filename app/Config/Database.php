@@ -26,9 +26,10 @@ class Database extends Config
      */
     public array $default = [
         'DSN'      => '',
-        'hostname' => 'localhost:3306',
-        'username' => 'username',
-        'password' => 'password',
+        'hostname' => 'localhost',
+        'port'     => 3306,
+        'username' => 'root',
+        'password' => '',
         'database' => 'taskapp',
         'DBDriver' => 'MySQLi',
         'DBPrefix' => '',
